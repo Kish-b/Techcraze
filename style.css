@@ -305,7 +305,7 @@ font-weight: bolder;
     
         animation: appear linear;
         animation-timeline: view();
-        animation-range: entry -5vh cover 35% ;
+        animation-range: entry -20vh cover 35% ;
     }
 
 }
