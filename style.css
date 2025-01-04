@@ -200,10 +200,10 @@ font-weight: bolder;
     width: 350px;
     height: 200px;
     background-color: antiquewhite;
- 
+
     animation: appear linear;
     animation-timeline: view();
-    animation-range: entry -100% cover 35% ;
+    animation-range: entry 0% cover 25% ;
 }
 
 
@@ -298,6 +298,14 @@ font-weight: bolder;
     
     }
 
-   
+    #main_info div {
+        width: 350px;
+        height: 200px;
+        background-color: antiquewhite;
+    
+        animation: appear linear;
+        animation-timeline: view();
+        animation-range: entry -5vh cover 35% ;
+    }
 
 }
