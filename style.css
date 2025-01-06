@@ -47,7 +47,7 @@ header {
     left: 0;
     z-index: 1000;
     background-color: rgba(17, 15, 15, 0.237);
-    backdrop-filter: blur(10px);
+    /* backdrop-filter: blur(10px); */
 
 }
 
@@ -111,7 +111,7 @@ header {
     padding: 0 20px;
     margin: auto;
     /* margin-top: 80px; */
-    min-height: 100vh;
+    /* min-height: 70vh; */
     
 }
 
@@ -263,7 +263,7 @@ border-radius: 15px;
 
   
 #hero{
-    max-height: 100vh;
+    min-height: 70vh;
 }
 
     .hero_image {
