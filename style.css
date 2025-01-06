@@ -22,6 +22,16 @@ body {
     }
 }
 
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
 a:link,
 a:visited,
 .head-nav {
@@ -31,7 +41,7 @@ a:visited,
 }
 
 header {
-    position: fixed;
+    /* position: fixed; */
     width: 100%;
     top: 0;
     left: 0;
@@ -42,7 +52,7 @@ header {
 }
 
 .header {
-    /* */
+ 
 
 
     max-width: 1300px;
@@ -50,7 +60,7 @@ header {
     justify-content: space-between;
     align-items: center;
     margin: auto;
-    padding: 16px 20px;
+    padding: 16px 30px;
 
 }
 
@@ -79,8 +89,16 @@ header {
 
 .hambergar {
     display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+}
 
-
+.hambergar .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 5px;
 }
 
 #hero {
@@ -89,10 +107,12 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 20px;
     padding: 0 20px;
     margin: auto;
-    margin-top: 80px;
+    /* margin-top: 80px; */
+    min-height: 100vh;
+    
 }
 
 .hero_image {
@@ -205,7 +225,7 @@ h1 {
     background-color: antiquewhite;
 
 
-
+border-radius: 15px;
     animation: appear linear;
     animation-timeline: view();
     animation-range: entry 0% cover 20%;
@@ -215,45 +235,36 @@ h1 {
 
 @media (max-width: 768px) {
 
-    .all-nav-btn {
-        display: none;
+    #navbar {
+        display: flex;
         position: absolute;
         top: 60px;
-        left: 0;
+        right: -100%;
         background-color: rgba(39, 39, 42, 0.9);
-        width: 100%;
+        width: 40%;
         text-align: center;
         flex-direction: column;
         padding: 10px;
         gap: 10px;
+        
+    transition: .7s ease-in-out; 
     }
 
-
-    .all-nav-btn.active {
-        display: flex;
+    #navbar.active {
+     
+        right: 0;
+        
     }
-
 
     .hambergar {
-        width: 35px;
-        height: 35px;
-        background-color: rgba(39, 39, 42, 0.3);
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        border-radius: 50%;
-        gap: 4px;
     }
 
 
-    .bar {
-        background-color: rgb(205, 201, 201);
-        text-align: center;
-        width: 18px;
-        height: 2px;
-    }
-
+  
+#hero{
+    max-height: 100vh;
+}
 
     .hero_image {
         max-width: 100%;
@@ -306,7 +317,7 @@ h1 {
     }
 
     #main_info div {
-        width: 350px;
+        max-width:345px;
         height: 200px;
         background-color: antiquewhite;
 
