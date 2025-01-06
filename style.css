@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: #000000;
+    background-color: #0b0ebd;
     font-family: "inter";
 
 }
@@ -252,7 +252,7 @@ border-radius: 15px;
 
     #navbar.active {
      display: flex;
-        
+        right: 0;
         transition: .7s ease-in-out; 
     }
 
