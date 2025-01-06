@@ -56,3 +56,49 @@ section3.addEventListener("click", () => {
     onediv.classList.remove("active");
     twodiv.classList.remove("active");
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Set the initial position of the background-slide based on the active button
+    const activeButton = document.querySelector('.she_ru_ev_btn.active');
+    setBackgroundSlidePosition(activeButton);
+});
+
+function handleClick(event) {
+    const buttons = document.querySelectorAll('.she_ru_ev_btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    const clickedButton = event.target;
+    clickedButton.classList.add('active');
+
+    // Set the background-slide to the clicked button's position
+    setBackgroundSlidePosition(clickedButton);
+}
+
+function setBackgroundSlidePosition(button) {
+    const backgroundSlide = document.querySelector('.background-slide');
+    const buttonRect = button.getBoundingClientRect(); // Get the button dimensions and position
+    const navRect = document.querySelector('.she_ru_ev_nav').getBoundingClientRect(); // Get parent dimensions
+    
+    // Calculate left position based on the button's left position relative to the parent container
+    const newLeftPosition = buttonRect.left - navRect.left;
+    
+    // Set the width of the background-slide to match the button width dynamically
+    backgroundSlide.style.width = `${buttonRect.width}px`;
+    
+    // Set the new position of the background-slide
+    backgroundSlide.style.left = `${newLeftPosition}px`;
+}
