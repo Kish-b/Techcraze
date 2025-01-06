@@ -1,104 +1,118 @@
-// const section1 = document.getElementById("one");
-// const onediv = document.getElementById("onediv");
-// const twodiv = document.getElementById("twodiv");
-// const threediv = document.getElementById("threediv");
+const hamburger = document.getElementById("hambergar");
+const navbar = document.getElementById("navbar");
 
-// section1.addEventListener("click", () => {
-//     onediv.classList.toggle("active");
-//     twodiv.classList.toggle("twodiv");
-//     threediv.classList.toggle("threediv");
+hamburger.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
+
+
+
+// const track = document.querySelector('.carousel-track');
+// const cards = document.querySelectorAll('.info');
+// const nextButton = document.getElementById('next');
+// const prevButton = document.getElementById('prev');
+// let currentIndex = 0;
+
+// const updateCarousel = () => {
+//   if (window.innerWidth > 768) { 
+//     const cardWidth = cards[0].offsetWidth + 400; 
+//     const offset = -(currentIndex * cardWidth);
+//     track.style.transform =  `translateX(${offset}px)`;
+//   } else {
+//     track.style.transform = 'none'; 
+//   }
+// };
+
+// nextButton.addEventListener('click', () => {
+//   if (window.innerWidth > 768 && currentIndex < cards.length - 4) { 
+//     currentIndex++;
+//     updateCarousel();
+//   }
+// });
+
+// prevButton.addEventListener('click', () => {
+//   if (window.innerWidth > 768 && currentIndex > 0) { 
+//     currentIndex--;
+//     updateCarousel();
+//   }
 // });
 
 
-// const section2 = document.getElementById("two");
+// window.addEventListener('resize', updateCarousel);
+
+// updateCarousel();
 
 
-// section.addEventListener("click", () => {
-//     twodiv.classList.toggle("active");
-//     threediv.classList.toggle("threediv");
-//     onediv.classList.toggle("onediv");
-// });
 
 
-// const section3 = document.getElementById("three");
 
 
-// section.addEventListener("click", () => {
-//     threediv.classList.toggle("active");
-// });
 
 
-const section1 = document.getElementById("schedules");
-const section2 = document.getElementById("events");
-const section3 = document.getElementById("three");
 
-const onediv = document.getElementById("onediv");
-const twodiv = document.getElementById("twodiv");
-const threediv = document.getElementById("threediv");
 
-// Event listener for section 1
-section1.addEventListener("click", () => {
-    onediv.classList.add("active");
-    twodiv.classList.remove("active");
-    threediv.classList.remove("active");
+
+
+
+
+
+
+const track = document.querySelector('.carousel-track');
+const cards = document.querySelectorAll('.info');
+const nextButton = document.getElementById('next');
+const prevButton = document.getElementById('prev');
+let currentIndex = 0;
+
+// Function to update the carousel
+const updateCarousel = () => {
+  if (window.innerWidth > 768) { // Carousel only works on larger screens
+    const cardWidth = cards[0].offsetWidth + 400; // Card width + margin
+    const offset = -(currentIndex * cardWidth);
+    track.style.transform = `translateX(${offset}px)`;
+  } else {
+    track.style.transform = 'none'; // Disable carousel on small screens
+  }
+};
+
+// Event listener for Next button
+nextButton.addEventListener('click', () => {
+  if (window.innerWidth > 768) {
+    currentIndex++;
+    updateCarousel();
+
+    // Disable Next button after one click
+    nextButton.disabled = true;
+    nextButton.style.opacity = '0.5'; // Optional visual feedback
+    prevButton.disabled = false;
+    prevButton.style.opacity = '1';
+  }
 });
 
-// Event listener for section 2
-section2.addEventListener("click", () => {
-    twodiv.classList.add("active");
-    onediv.classList.remove("active");
-    threediv.classList.remove("active");
+// Event listener for Prev button
+prevButton.addEventListener('click', () => {
+  if (window.innerWidth > 768 && currentIndex > 0) {
+    currentIndex--;
+    updateCarousel();
+
+    // Enable Next button when Prev is clicked
+    nextButton.disabled = false;
+    nextButton.style.opacity = '1';
+    prevButton.disabled = currentIndex <= 0; // Disable Prev if at the start
+    prevButton.style.opacity = prevButton.disabled ? '0.5' : '1';
+  }
 });
 
-// Event listener for section 3
-section3.addEventListener("click", () => {
-    threediv.classList.add("active");
-    onediv.classList.remove("active");
-    twodiv.classList.remove("active");
+// Disable both buttons on small screens
+window.addEventListener('resize', () => {
+  if (window.innerWidth <= 768) {
+    nextButton.disabled = true;
+    prevButton.disabled = true;
+  }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Set the initial position of the background-slide based on the active button
-    const activeButton = document.querySelector('.she_ru_ev_btn.active');
-    setBackgroundSlidePosition(activeButton);
-});
-
-function handleClick(event) {
-    const buttons = document.querySelectorAll('.she_ru_ev_btn');
-    buttons.forEach(button => button.classList.remove('active'));
-
-    // Add 'active' class to the clicked button
-    const clickedButton = event.target;
-    clickedButton.classList.add('active');
-
-    // Set the background-slide to the clicked button's position
-    setBackgroundSlidePosition(clickedButton);
-}
-
-function setBackgroundSlidePosition(button) {
-    const backgroundSlide = document.querySelector('.background-slide');
-    const buttonRect = button.getBoundingClientRect(); // Get the button dimensions and position
-    const navRect = document.querySelector('.she_ru_ev_nav').getBoundingClientRect(); // Get parent dimensions
-    
-    // Calculate left position based on the button's left position relative to the parent container
-    const newLeftPosition = buttonRect.left - navRect.left;
-    
-    // Set the width of the background-slide to match the button width dynamically
-    backgroundSlide.style.width = `${buttonRect.width}px`;
-    
-    // Set the new position of the background-slide
-    backgroundSlide.style.left = `${newLeftPosition}px`;
-}
+// Initial setup
+updateCarousel();
+nextButton.disabled = false;
+prevButton.disabled = true;
+prevButton.style.opacity = '0.5'; // Prev button starts disabled
