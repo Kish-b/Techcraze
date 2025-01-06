@@ -1,62 +1,104 @@
-const hamburger = document.getElementById("hambergar");
-const navbar = document.getElementById("navbar");
+// const section1 = document.getElementById("one");
+// const onediv = document.getElementById("onediv");
+// const twodiv = document.getElementById("twodiv");
+// const threediv = document.getElementById("threediv");
 
-hamburger.addEventListener("click", () => {
-    navbar.classList.toggle("active");
-});
-
-
-// hamburger.addEventListener('click', () => {
-//     if (navbar.style.display === 'none' || navbar.style.display === '') {
-//         navbar.style.display = 'flex'; // Make it visible
-//         setTimeout(() => {
-//             navbar.classList.add('active'); // Trigger slide animation
-//         }, 10); // Delay to ensure the transition applies
-//     } else {
-//         navbar.classList.remove('active'); // Slide it out
-//         setTimeout(() => {
-//             navbar.style.display = 'none'; // Hide after animation completes
-//         }, 700); // Matches the transition duration (0.7s)
-//     }
+// section1.addEventListener("click", () => {
+//     onediv.classList.toggle("active");
+//     twodiv.classList.toggle("twodiv");
+//     threediv.classList.toggle("threediv");
 // });
 
 
-const track = document.querySelector('.carousel-track');
-const cards = document.querySelectorAll('.info');
-const nextButton = document.getElementById('next');
-const prevButton = document.getElementById('prev');
-let currentIndex = 0;
+// const section2 = document.getElementById("two");
 
-const updateCarousel = () => {
-  if (window.innerWidth > 768) { // Only apply carousel function for larger screens
-    const cardWidth = cards[0].offsetWidth + 400; // Card width + margin
-    const offset = -(currentIndex * cardWidth);
-    track.style.transform =  `translateX(${offset}px)`;
-  } else {
-    track.style.transform = 'none'; // Disable carousel on small screens
-  }
-};
 
-nextButton.addEventListener('click', () => {
-  if (window.innerWidth > 768 && currentIndex < cards.length - 4) { // Only work for larger screens
-    currentIndex++;
-    updateCarousel();
-  }
+// section.addEventListener("click", () => {
+//     twodiv.classList.toggle("active");
+//     threediv.classList.toggle("threediv");
+//     onediv.classList.toggle("onediv");
+// });
+
+
+// const section3 = document.getElementById("three");
+
+
+// section.addEventListener("click", () => {
+//     threediv.classList.toggle("active");
+// });
+
+
+const section1 = document.getElementById("schedules");
+const section2 = document.getElementById("events");
+const section3 = document.getElementById("three");
+
+const onediv = document.getElementById("onediv");
+const twodiv = document.getElementById("twodiv");
+const threediv = document.getElementById("threediv");
+
+// Event listener for section 1
+section1.addEventListener("click", () => {
+    onediv.classList.add("active");
+    twodiv.classList.remove("active");
+    threediv.classList.remove("active");
 });
 
-prevButton.addEventListener('click', () => {
-  if (window.innerWidth > 768 && currentIndex > 0) { // Only work for larger screens
-    currentIndex--;
-    updateCarousel();
-  }
+// Event listener for section 2
+section2.addEventListener("click", () => {
+    twodiv.classList.add("active");
+    onediv.classList.remove("active");
+    threediv.classList.remove("active");
 });
 
-// Update carousel on window resize
-window.addEventListener('resize', updateCarousel);
+// Event listener for section 3
+section3.addEventListener("click", () => {
+    threediv.classList.add("active");
+    onediv.classList.remove("active");
+    twodiv.classList.remove("active");
+});
 
-// Initial setup
-updateCarousel();
 
 
 
 
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Set the initial position of the background-slide based on the active button
+    const activeButton = document.querySelector('.she_ru_ev_btn.active');
+    setBackgroundSlidePosition(activeButton);
+});
+
+function handleClick(event) {
+    const buttons = document.querySelectorAll('.she_ru_ev_btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    const clickedButton = event.target;
+    clickedButton.classList.add('active');
+
+    // Set the background-slide to the clicked button's position
+    setBackgroundSlidePosition(clickedButton);
+}
+
+function setBackgroundSlidePosition(button) {
+    const backgroundSlide = document.querySelector('.background-slide');
+    const buttonRect = button.getBoundingClientRect(); // Get the button dimensions and position
+    const navRect = document.querySelector('.she_ru_ev_nav').getBoundingClientRect(); // Get parent dimensions
+    
+    // Calculate left position based on the button's left position relative to the parent container
+    const newLeftPosition = buttonRect.left - navRect.left;
+    
+    // Set the width of the background-slide to match the button width dynamically
+    backgroundSlide.style.width = `${buttonRect.width}px`;
+    
+    // Set the new position of the background-slide
+    backgroundSlide.style.left = `${newLeftPosition}px`;
+}
