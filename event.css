@@ -1,197 +1,104 @@
+// const section1 = document.getElementById("one");
+// const onediv = document.getElementById("onediv");
+// const twodiv = document.getElementById("twodiv");
+// const threediv = document.getElementById("threediv");
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+// section1.addEventListener("click", () => {
+//     onediv.classList.toggle("active");
+//     twodiv.classList.toggle("twodiv");
+//     threediv.classList.toggle("threediv");
+// });
+
+
+// const section2 = document.getElementById("two");
+
+
+// section.addEventListener("click", () => {
+//     twodiv.classList.toggle("active");
+//     threediv.classList.toggle("threediv");
+//     onediv.classList.toggle("onediv");
+// });
+
+
+// const section3 = document.getElementById("three");
+
+
+// section.addEventListener("click", () => {
+//     threediv.classList.toggle("active");
+// });
+
+
+const section1 = document.getElementById("schedules");
+const section2 = document.getElementById("events");
+const section3 = document.getElementById("three");
+
+const onediv = document.getElementById("onediv");
+const twodiv = document.getElementById("twodiv");
+const threediv = document.getElementById("threediv");
+
+// Event listener for section 1
+section1.addEventListener("click", () => {
+    onediv.classList.add("active");
+    twodiv.classList.remove("active");
+    threediv.classList.remove("active");
+});
+
+// Event listener for section 2
+section2.addEventListener("click", () => {
+    twodiv.classList.add("active");
+    onediv.classList.remove("active");
+    threediv.classList.remove("active");
+});
+
+// Event listener for section 3
+section3.addEventListener("click", () => {
+    threediv.classList.add("active");
+    onediv.classList.remove("active");
+    twodiv.classList.remove("active");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Set the initial position of the background-slide based on the active button
+    const activeButton = document.querySelector('.she_ru_ev_btn.active');
+    setBackgroundSlidePosition(activeButton);
+});
+
+function handleClick(event) {
+    const buttons = document.querySelectorAll('.she_ru_ev_btn');
+    buttons.forEach(button => button.classList.remove('active'));
+
+    // Add 'active' class to the clicked button
+    const clickedButton = event.target;
+    clickedButton.classList.add('active');
+
+    // Set the background-slide to the clicked button's position
+    setBackgroundSlidePosition(clickedButton);
 }
 
-body {
-    background-color: #000000;
-    font-family: "inter";
-
-}
-header {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    background-color: rgba(17, 15, 15, 0.237);
-    backdrop-filter: blur(10px);
-}
-
-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    padding: 16px 30px;
-}
-
-
-.logo-link{
-    position: absolute;
-    right: 40px;
-    top: 40px;
-}
-
-.rec{
-  
-    width: 100%;
-    height: 190px;
+function setBackgroundSlidePosition(button) {
+    const backgroundSlide = document.querySelector('.background-slide');
+    const buttonRect = button.getBoundingClientRect(); // Get the button dimensions and position
+    const navRect = document.querySelector('.she_ru_ev_nav').getBoundingClientRect(); // Get parent dimensions
     
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  20% ,#00000032 ), url("event images/che.jpeg") ;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position:center ;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-
-}
-
-.cir{
-    width: 90px;
-    height: 90px;
-    background-color: brown;
-    border-radius: 50%;
-}
-
-
-.she_ru_ev_nav{
-    display: flex;
-    justify-content: center;
-
-}
-
-.she_ru_ev_btn {
-
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    width: 261px;
-    height: 53px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: rgb(194, 192, 192);
-    text-decoration: none;
-    background-color: #342b2b00;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-    font-weight: bolder;
-
-
-}
-
-.on_off_stage_info{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 20px 40px;
-    gap: 20px;
-}
-
-.on_off_stage_info h1{
-    color: #ffffff;
-    font-size: 14px;
-}
-
-.on_off_stage_info p{
-    color: #ffffff;
-    font-size: 9px;
-}
-
-.line{
-    height: 2px;
-    background-color: bisque;
-    width: 70%;
-    margin-bottom: 20px;
-}
-
-/* #twodiv{
-    display: flex;
-    color: #ffffff;
-    font-size: 100px;
-}
-
-
-#threediv{
-    display: none;
-    color: #ffffff;
-    font-size: 100px;
-}
-
-#onediv{
-    display: none;
-    color: #ffffff;
-    font-size: 100px;
-}
-
-#onediv.active {
-    display: flex;
-
-}
-
-#twodiv.active {
-    display: flex;
-
-}
-
-#threediv.active {
-    display: flex;
-
-} */
-
-
-/* Default visibility for divs */
-#twodiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff;
-    font-size: 100px;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 5px 10px; 
-}
-
-#threediv,
-#onediv {
-    display: none;
-    color: #ffffff;
-    font-size: 100px;
-}
-
-/* Show the active div */
-#onediv.active,
-#twodiv.active,
-#threediv.active {
-    display: flex;
-}
-
-/* Ensure non-active divs are hidden */
-#onediv:not(.active),
-#twodiv:not(.active),
-#threediv:not(.active) {
-    display: none;
-}
-
-.events{
-    width: 170px;
-    height: 170px;
-    background-color: bisque;
-    border-radius:20px ;
-}
-
-
-
-@media (max-width: 768px) { 
-  
-
-
-
-
-
+    // Calculate left position based on the button's left position relative to the parent container
+    const newLeftPosition = buttonRect.left - navRect.left;
+    
+    // Set the width of the background-slide to match the button width dynamically
+    backgroundSlide.style.width = `${buttonRect.width}px`;
+    
+    // Set the new position of the background-slide
+    backgroundSlide.style.left = `${newLeftPosition}px`;
 }
