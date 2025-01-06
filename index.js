@@ -1,7 +1,6 @@
 const hamburger = document.getElementById("hambergar");
-const navbar = document.getElementById("body");
+const navbar = document.getElementById("navbar");
 
 hamburger.addEventListener("click", () => {
-//    document.getElementById("body").style.backgroundColor= "white";
     navbar.classList.toggle("active");
 });
