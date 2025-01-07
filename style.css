@@ -413,7 +413,7 @@ border-radius: 15px;
     }
 
     .hero_logo {
-        max-width: 100%;
+        max-width: 60%;
 
     }
 
@@ -432,7 +432,7 @@ border-radius: 15px;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: auto;
+        margin:  auto;
         gap: 10px;
     }
 
@@ -489,6 +489,7 @@ border-radius: 15px;
         display: none;
     }
  .info {
+    margin-top: 10px;
         max-width:345px;
         height: 200px;
         background-color: antiquewhite;
