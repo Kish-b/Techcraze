@@ -51,6 +51,34 @@ hamburger.addEventListener("click", () => {
 
 
 
+const regBtn = document.querySelector('.reg_btn');
+
+// Add a click event listener
+regBtn.addEventListener('click', () => {
+  // Add the 'clicked' class to restart animation
+  regBtn.classList.add('clicked');
+
+  // Remove the class after a short delay to reset the state
+  setTimeout(() => {
+    regBtn.classList.remove('clicked');
+  }, 100); // Adjust delay if needed
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
