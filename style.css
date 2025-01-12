@@ -193,9 +193,9 @@ h1 {
 
 .gold {
 
-    width: 3px;
+    width: 2.5px;
     height: 60px;
-    background-image: linear-gradient(rgb(0, 0, 0), #0070EE, black);
+    background-image: linear-gradient(rgb(0, 0, 0),  #0070EE, black);
     /* rotate: 90deg; */
     align-self: center;
 }
@@ -217,7 +217,10 @@ h1 {
     transition: background-color 0.3s ease;
     font-weight: bolder;
 position: relative;
+
+
 }
+
 .reg_btn:before {
     position: absolute;
     content: "";
@@ -227,56 +230,44 @@ position: relative;
     width: calc(100% + 4px);
     border-radius: 5px;
     z-index: -1;
-    opacity: 1; /* Visible by default */
+    opacity: 1;
     filter: blur(5px);
-    background: linear-gradient(
-      45deg,
-      #ff0000,
-      #ff7300,
-      #fffb00,
-      #48ff00,
-      #00ffd5,
-      #002bff,
-      #7a00ff,
-      #ff00c8,
-      #ff0000
-    );
-    background-size: 400%;
-    animation: animate 20s linear infinite; /* Default border animation */
-    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
-  }
+    /* background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);  */
+    background: linear-gradient(45deg, #00BFFF, #0090FF, #0080FB, #0093FF, #00b3ff, #002bff, #2600ff, #0075F2, #0077F4); 
+    background-size: 400%;     
+    opacity: 1; 
+    transition: opacity 0.1s ease-in-out;
+    animation: animate 20s linear infinite;
+}
 
-  /* When the button is clicked */
-  .reg_btn.clicked:before {
-    animation: animate 20s linear infinite; /* Restart the border animation */
-    opacity: 1; /* Keep the border visible */
-  }
-
-  /* When the button is hovered */
-  .reg_btn:hover {
-    background-color: #00A2FF; /* Changes background color */
-    box-shadow: 0 0 6px 5px #00a2ff4c; /* Glowing effect */
+/* Button hover for desktops */
+.reg_btn:hover {
+    background-color: #00A2FF; 
+    box-shadow: 0 0 6px 5px #00a2ff4c; 
     color: #000000;
-  }
+}
 
-  /* Stop the border animation on hover */
-  .reg_btn:hover:before {
-    animation: none; /* Stops the border animation */
-    opacity: 0; /* Hides the animated border */
-  }
+.reg_btn:hover::before {
+    animation: none; 
+    opacity: 0; 
+}
 
-  /* Keyframe animation for the border */
-  @keyframes animate {
+/* Border animation keyframes */
+@keyframes animate {
     0% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
     50% {
-      background-position: 400% 0;
+        background-position: 400% 0;
     }
     100% {
-      background-position: 0 0;
+        background-position: 0 0;
     }
-  }
+}
+
+
+
+
 
 
 
@@ -562,5 +553,14 @@ border-radius: 15px;
         animation-timeline: view();
         animation-range: entry -40vh cover 35%;
     }
+
+
+    .reg_btn:hover {
+        background-color: #00A2FF; /* Changes background color */
+        box-shadow: 0 0 6px 5px #00a2ff4c; /* Glowing effect */
+        color: #000000;
+    }
+
+
 
 }
