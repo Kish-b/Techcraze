@@ -1,7 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&family=Dancing+Script:wght@500&family=Doto:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville&family=Poppins:wght@100;300;400;500;600&family=Rubik+Doodle+Shadow&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Poppins", serif;
+ 
+    font-style: normal;
 }
 
 body {
@@ -204,7 +210,7 @@ h1 {
     height: 53px;
     padding: 10px 20px;
     font-size: 16px;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
     text-decoration: none;
     background-color: #201f1f;
     border-radius: 5px;
@@ -221,7 +227,7 @@ position: relative;
     width: calc(100% + 4px);
     border-radius: 5px;
     z-index: -1;
-    opacity: 1;
+    opacity: 1; /* Visible by default */
     filter: blur(5px);
     background: linear-gradient(
       45deg,
@@ -236,40 +242,41 @@ position: relative;
       #ff0000
     );
     background-size: 400%;
-    opacity: 1; 
-    transition: opacity 0.1s ease-in-out;
-    animation: animate 20s linear infinite;
-}
-.reg_btn:active:before {
-  
-    filter: blur(5px); 
-   
-}
+    animation: animate 20s linear infinite; /* Default border animation */
+    transition: opacity 0.3s ease-in-out, filter 0.3s ease-in-out;
+  }
 
-/* Button's glowing background on hover */
-.reg_btn:hover {
-    background-color: #0070EE;
-    box-shadow: 0 0 6px 5px rgba(0, 64, 255, 0.301); 
-}
+  /* When the button is clicked */
+  .reg_btn.clicked:before {
+    animation: animate 20s linear infinite; /* Restart the border animation */
+    opacity: 1; /* Keep the border visible */
+  }
 
+  /* When the button is hovered */
+  .reg_btn:hover {
+    background-color: #00A2FF; /* Changes background color */
+    box-shadow: 0 0 6px 5px #00a2ff4c; /* Glowing effect */
+    color: #000000;
+  }
 
-.reg_btn:hover:before {
-    animation: none; 
-    opacity: 0; 
-}
+  /* Stop the border animation on hover */
+  .reg_btn:hover:before {
+    animation: none; /* Stops the border animation */
+    opacity: 0; /* Hides the animated border */
+  }
 
-/* Border animation keyframes */
-@keyframes animate {
+  /* Keyframe animation for the border */
+  @keyframes animate {
     0% {
-        background-position: 0 0;
+      background-position: 0 0;
     }
     50% {
-        background-position: 400% 0;
+      background-position: 400% 0;
     }
     100% {
-        background-position: 0 0;
+      background-position: 0 0;
     }
-}
+  }
 
 
 
