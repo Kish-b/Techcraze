@@ -326,6 +326,13 @@ font-size: 20px;
     #twodiv {
         grid-template-columns: repeat(3, 1fr); /* 3 columns per row */
     }
+
+    .each_schedule{
+
+
+      height: 16vh;
+
+    }
 }
 
 @media (max-width: 768px) {
