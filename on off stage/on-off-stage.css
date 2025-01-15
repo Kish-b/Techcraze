@@ -588,7 +588,7 @@ width: 86%;
     .each_schedule{
         gap: 15%;
       width: 90%;
-       min-height: calc(100px + 6vh );    
+       min-height: calc(120px + 6vh );    
       
       margin: 0 auto ;
 
