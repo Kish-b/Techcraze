@@ -310,7 +310,7 @@ font-size: 20px;
     margin-right:42% ;
     position: relative;
     box-sizing: border-box; /* Ensure padding is accounted for in width/height */
-    min-height: calc(100px + 10vh);
+    min-height: calc(100px + 12vh);
 }
 
 .schedule_time h1 {
@@ -588,7 +588,7 @@ width: 86%;
     .each_schedule{
         gap: 15%;
       width: 90%;
-      min-height: calc(80px + 8vh );   
+      min-height: calc(80px + 10vh );   
       margin: 0 auto ;
 
     }
