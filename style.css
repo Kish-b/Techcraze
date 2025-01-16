@@ -255,11 +255,11 @@ h1 {
     background-size: 400%;     
     opacity: 1; 
     transition: ease-in-out;
-    animation: animate 20s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 .reg_btn:hover {
-    background-color: goldenrod ; 
+    background-color: rgb(215, 164, 9) ; 
     box-shadow: 0 0 3px 2px goldenrod ;  
     color: #000000;
 }
@@ -270,8 +270,8 @@ h1 {
 }
 
 .reg_btn:active {
-     background-color: gold;
-    box-shadow: 0 0 3px 2px goldenrod  ;  
+     background-color: 201f1f;
+     box-shadow: 0 0 3px 2px rgba(218, 165, 32, 0)  ;   
     color: #000000; 
 }
 
@@ -495,7 +495,7 @@ border-radius: 15px;
     }
 
     .hero_logo {
-        max-width: 45%;
+        max-width: 62%;
         height: auto;
        
 
@@ -509,17 +509,31 @@ border-radius: 15px;
         line-height: 12px;
     }
 
-    .reg_btn:active {
-        background-color: #00A2FF;
-        box-shadow: 0 0 6px 5px #00a2ff4c;
-        color: #000000;
-    }
+ 
 
     /* Reset to normal state on touchend */
     .reg_btn:active::before {
         animation: none; 
         opacity: 0; 
     }
+
+
+    .reg_btn:hover {
+        background-color: rgb(0, 0, 0) ; 
+        box-shadow: 0 0 3px 2px goldenrod ;  
+        color: #ffffff;
+    }
+    
+    
+    
+    .reg_btn:active {
+         background-color: #201f1f;
+         box-shadow: 0 0 2px 1px rgb(218, 165, 32)  ;   
+        color: #ffffff; 
+    }
+
+
+
     .venue {
 
      
