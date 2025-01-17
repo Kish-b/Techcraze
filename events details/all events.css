@@ -73,6 +73,17 @@ svg{
 
 }
 
+
+#onstage_rec{
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/on1.jpg") ;
+}
+
+#offstage_rec{
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/che.jpeg") ;
+}
+
+
+
 .cir{
     width: 160px;
     height: 160px;
@@ -357,7 +368,7 @@ margin-top: 30px;
     width: 100%;
     height: 190px;
     
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  30% ,#00000032 ), url("../event images/che.jpeg") ;
+    background-image: linear-gradient(0deg, #000000  0% ,  #000000  20% ,#00000032 ), url("../event images/che.jpeg") ;
     background-repeat: no-repeat;
     background-size:cover;
     background-position:center ;
@@ -366,6 +377,9 @@ margin-top: 30px;
     align-items: flex-end;
 
 }
+
+
+
 
 .cir{
     width: 100px;
@@ -440,7 +454,7 @@ margin-top: 30px;
 .general_event_gules_div{
  
     padding: 35px 40px ;
-    font-size: 10px;
+    font-size: 13px;
     
     }
 
