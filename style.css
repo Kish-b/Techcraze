@@ -654,11 +654,11 @@ footer span{
  
 
     /* Reset to normal state on touchend */
-    .reg_btn:active::before {
+    /* .reg_btn:active::before {
         animation: none; 
         opacity: 0; 
     }
-
+ */
 
     .reg_btn:hover {
         background-color: rgb(0, 0, 0) ; 
