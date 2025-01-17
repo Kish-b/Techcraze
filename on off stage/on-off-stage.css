@@ -73,11 +73,11 @@ svg{
 }
 
 #onstage_rec{
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  20% ,#00000032 ), url("../event images/on1.jpg") ;
+    background-image:linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/on1.jpg") ;
 }
 
 #offstage_rec{
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  20% ,#00000032 ), url("../event images/che.jpeg") ;
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/che.jpeg") ;
 }
 
 
@@ -262,7 +262,7 @@ color: #F87711;
 
 
 #channel_surfing_img{
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  30% ,#00000032 ), url("../event images/code.jpg") ;
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/code.jpg") ;
 
 }
 #voxment_img{
@@ -271,7 +271,7 @@ color: #F87711;
 }
 
 #paper_img{
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  30% ,#00000032 ), url("../event images/paper.jpg") ;
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/paper.jpg") ;
 
 }
 
@@ -281,7 +281,7 @@ color: #F87711;
 }
 
 #adzap_img{
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  30% ,#00000032 ), url("../event images/code.jpg") ;
+    background-image: linear-gradient(0deg, #000000  15% ,#00000032 ), url("../event images/code.jpg") ;
 
 }
 
@@ -495,7 +495,7 @@ border-radius: 5px;
   
     height: 190px;
     
-    background-image: linear-gradient(0deg, #000000  0% ,  #000000  30% ,#00000032 ), url("event images/che.jpeg") ;
+    background-image: linear-gradient(0deg, #000000  0% ,  #000000  20% ,#00000032 ), url("event images/che.jpeg") ;
 
 }
 
