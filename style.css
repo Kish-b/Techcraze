@@ -257,7 +257,7 @@ h1 {
     background-size: 400%;     
     opacity: 1; 
     transition: ease-in-out;
-    animation: animate 15s linear infinite;
+    animation: animate 10s linear infinite;
 }
 
 .reg_btn:hover {
@@ -277,17 +277,6 @@ h1 {
     color: #000000; 
 }
 
-@keyframes animate {
-    0% {
-        background-position: 0 0;
-    }
-    50% {
-        background-position: 400% 0;
-    }
-    100% {
-        background-position: 0 0;
-    }
-}
 
 
 
