@@ -303,19 +303,19 @@ h1 {
 
 
 #onstage_img {
-    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("event images/on1.jpg");
+    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("on1.jpg");
 }
 
 #offstage_img {
-    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("event images/off.png");
+    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("off.png");
 }
 
 #schedule_img {
-    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("event images/schedule.jpg");
+    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("schedule.jpg");
 }
 
 #about_img {
-    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("event images/on1.jpg");
+    background-image: linear-gradient(0deg, #000000 15%, #00000032), url("on1.jpg");
 }
 
 
