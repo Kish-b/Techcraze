@@ -238,7 +238,7 @@ h1 {
     background-size: 400%;
     opacity: 1;
     transition: ease-in-out;
-    animation: animate 10s linear infinite;
+    animation: animate 20s linear infinite;
 }
 
 .reg_btn:hover {
