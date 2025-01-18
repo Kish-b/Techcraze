@@ -733,7 +733,7 @@ footer span {
         height: 200px;
         animation: appear linear;
         animation-timeline: view();
-        animation-range: entry -50vh cover 35%;
+        animation-range: entry -40vh cover 35%;
     }
 
 
