@@ -1,0 +1,10 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "index.html" },
+      { "source": "/onstage", "destination": "on off stage/onstage.html" },
+      { "source": "/offstage", "destination": "on off stage/offstage.html" },
+      { "source": "/schedule", "destination": "main schedule/schedule.html" },
+      { "source": "/about-us", "destination": "about us/about.html" }
+    ]
+  }
+  
