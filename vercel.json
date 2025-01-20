@@ -1,7 +1,7 @@
 {
-    "rewrites": [
+    "redirects": [
       { "source": "/", "destination": "index.html" },
-      { "source": "/Home", "destination": "./index.html#main_info" },
+      { "source": "/Home", "destination": "index.html#main_info" },
       { "source": "/Schedule", "destination": "./main schedule/schedule.html" },
       { "source": "/About", "destination": "./about us/about.html" },
       { "source": "/Onstage", "destination": "./on off stage/onstage.html" },
