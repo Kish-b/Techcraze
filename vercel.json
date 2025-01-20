@@ -1,11 +1,11 @@
 {
     "rewrites": [
-      { "source": "/", "destination": "/index.html" },
-      { "source": "/Home", "destination": "/index.html#main_info" },
-      { "source": "/Schedule", "destination": "/main schedule/schedule.html" },
-      { "source": "/About", "destination": "/about us/about.html" },
-      { "source": "/Onstage", "destination": "/on off stage/onstage.html" },
-      { "source": "/Offstage", "destination": "/on off stage/offstage.html" },
+      { "source": "/", "destination": "index.html" },
+      { "source": "/Home", "destination": "./index.html#main_info" },
+      { "source": "/Schedule", "destination": "./main schedule/schedule.html" },
+      { "source": "/About", "destination": "./about us/about.html" },
+      { "source": "/Onstage", "destination": "./on off stage/onstage.html" },
+      { "source": "/Offstage", "destination": "./on off stage/offstage.html" },
       { "source": "/Events/voxment", "destination": "/events details/voxment.html" },
       { "source": "/Events/channel-surfing", "destination": "/events details/channel surfing.html" },
       { "source": "/Events/paper-present", "destination": "/events details/paper present.html" },
