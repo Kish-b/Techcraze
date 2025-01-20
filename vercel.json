@@ -1,0 +1,26 @@
+{
+    "rewrites": [
+      { "source": "/", "destination": "/index.html" },
+      { "source": "/Home", "destination": "/index.html#main_info" },
+      { "source": "/Schedule", "destination": "/main schedule/schedule.html" },
+      { "source": "/About", "destination": "/about us/about.html" },
+      { "source": "/Onstage", "destination": "/on off stage/onstage.html" },
+      { "source": "/Offstage", "destination": "/on off stage/offstage.html" },
+      { "source": "/Events/voxment", "destination": "/events details/voxment.html" },
+      { "source": "/Events/channel-surfing", "destination": "/events details/channel surfing.html" },
+      { "source": "/Events/paper-present", "destination": "/events details/paper present.html" },
+      { "source": "/Events/shipwreck", "destination": "/events details/shipwreck.html" },
+      { "source": "/Events/adzap", "destination": "/events details/adzap.html" },
+      { "source": "/Events/techy-walk", "destination": "/events details/techy walk.html" },
+      { "source": "/Events/debugging", "destination": "/events details/debugging.html" },
+      { "source": "/Events/web-design", "destination": "/events details/web design.html" },
+      { "source": "/Events/logo-design", "destination": "/events details/logo design.html" },
+      { "source": "/Events/photography", "destination": "/events details/photography.html" },
+      { "source": "/Events/ipl-auction", "destination": "/events details/ipl auction.html" },
+      { "source": "/Events/potpourri", "destination": "/events details/potpourri.html" },
+      { "source": "/Events/poster", "destination": "/events details/poster.html" },
+      { "source": "/Events/code-o-fiesta", "destination": "/events details/code-o-fiesta.html" },
+      { "source": "/register", "destination": "/index.html#reg_btn" }
+    ]
+  }
+  
