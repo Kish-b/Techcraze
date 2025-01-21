@@ -573,9 +573,16 @@ footer span {
 
 @media (max-width: 768px) {
 
-    a:focus{
-        outline: none;
+    a:focus,
+    a:active {
+        outline: none; 
+        border: none; 
     }
+    
+    a {
+        -webkit-tap-highlight-color: transparent; 
+    }
+    
 
     #navbar {
         display: none;
