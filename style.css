@@ -573,6 +573,10 @@ footer span {
 
 @media (max-width: 768px) {
 
+    a:focus{
+        outline: none;
+    }
+
     #navbar {
         display: none;
         position: absolute;
