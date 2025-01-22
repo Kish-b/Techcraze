@@ -59,6 +59,17 @@ body {
     }
 }
 
+a:focus,
+a:active {
+    outline: none; 
+    border: none; 
+}
+
+a {
+    -webkit-tap-highlight-color: transparent; 
+}
+
+
 
 a:link,
 a:visited,
