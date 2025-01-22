@@ -443,7 +443,17 @@ margin-top: 30px;
 
 @media (max-width: 768px) {
 
+    a:focus,
+    a:active {
+        outline: none; 
+        border: none; 
+    }
+    
+    a {
+        -webkit-tap-highlight-color: transparent; 
+    }
 
+    
     .logo-link{
         position: absolute;
         right: 40px;
